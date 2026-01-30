@@ -4,12 +4,18 @@ import viteLogo from '/vite.svg'
 
 function App() {
   const [count, setCount] = useState(0)
+  let arr=[1,2,3,4,5]
 
   return (
-  <>
-  <h1 className="text-red-600 text-3xl" >Welcome</h1>
-   <h1 className="text-4xl font-bold text-red-800 mb-2">Tailwind CSS Example</h1>
-  </>
+    <div className='gap-2 flex flex-row'>
+      {
+       arr.map((item,index)=>{
+        return <div key={index} className='h-50 w-50 bg-red-500 m-2'>{item}</div>
+       })
+      }
+    </div>
+
+
   )
 }
 
